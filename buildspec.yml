@@ -1,0 +1,17 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    RAILS_ENV: production
+    DATABASE_URL: sqlite3://mycase_billing.db
+
+phases:
+  build:
+    commands:
+      - echo Building
+      - bundle
+
+artifacts:
+  type: zip
+  files:
+    - **/*
